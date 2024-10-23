@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs="patternRatio:0.84">
+      <a-marker
+        type="pattern"
+        url="https://cdn.glitch.global/d9e3ed75-caee-4886-9e47-ea212cfb083d/marker.patt?v=1729538564510"
+      >
+        <a-image
+          id="profile"
+          width="3"
+          height="3"
+          position="0 0 -1.5"
+          rotation="-90 0 0"
+          src="https://cdn.glitch.global/d9e3ed75-caee-4886-9e47-ea212cfb083d/image.png?v=1729540998603"
+        ></a-image>
+       
+      </a-marker>
+
+      <a-assets>
+        <video
+          id="abc"
+          autoplay
+          loop="false"
+          src="https://cdn.glitch.me/d9e3ed75-caee-4886-9e47-ea212cfb083d/abc.mp4?v=1729721230393"
+        ></video>
+      </a-assets>
+
+      <!-- Using the asset management system. -->
+      <a-video
+        src="#abc"
+        width="5"
+        height="3"
+        position="0 0 -20"
+      ></a-video>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
